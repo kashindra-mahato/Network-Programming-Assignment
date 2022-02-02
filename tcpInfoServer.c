@@ -76,7 +76,7 @@ int main(int argc, char *argv[])
     int sockfd, connfd, len;
     char buff[MAX];
     struct sockaddr_in servaddr, cli;
-    const char *pMessage = "Do you want to see this information again?again/quit.";
+
     //load function readData
     readData(head);
     //Create socket
