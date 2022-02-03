@@ -145,7 +145,7 @@ struct Student* readLinkedList(char filename[],char* reg_no[15]){
 
 
 void writeData(struct Student *h){
-	FILE *fp = fopen("students.txt","w");
+	FILE *fp = fopen("students","w");
 
 	while(h!=NULL){
 		fwrite(h,sizeof(struct Student),1,fp);
@@ -158,7 +158,7 @@ void writeData(struct Student *h){
 
 void readData(struct Student *h){
 	struct Student s1;
-	FILE *fp = fopen("students.txt","r");
+	FILE *fp = fopen("students","r");
 	while(fread(&s1,sizeof(struct Student),1,fp)){
 	  if(h==NULL){
 		h = (struct Student*) malloc(sizeof(struct Student));

@@ -43,8 +43,6 @@ int main(int argc, char const *argv[])
    while(1){
 	bzero(buff,sizeof(buff));
 
-	// Get input from the user:
-
     
     // Send the message to server:
     if(send(sockfd, argv[6], strlen(argv[6]),0) < 0){
@@ -60,6 +58,7 @@ int main(int argc, char const *argv[])
     
     printf("Server's response: %s\n",buff);
     bzero(buff,sizeof(buff));
+    // Get input from the user:
     printf("Enter message: ");
     scanf("%s", msg1);
     strcpy(buff,msg1);

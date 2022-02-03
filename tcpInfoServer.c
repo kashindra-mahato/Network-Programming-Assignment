@@ -45,7 +45,7 @@ void search(char* reg_no[15], int connfd){
 
 void readData(struct Student *h){
 	struct Student s1;
-	FILE *fp = fopen("students.txt","r");
+	FILE *fp = fopen("students","r");
 	while(fread(&s1,sizeof(struct Student),1,fp)){
 	  if(h==NULL){
 		h = (struct Student*) malloc(sizeof(struct Student));
