@@ -27,7 +27,7 @@ void search(char* reg_no[15], int connfd){
         		printf("Reg_no: %s\n", temp->reg_no);
 			temp->msg_sent_count = temp->msg_sent_count+1;
 			printf("msg count: %d\n", temp->msg_sent_count);
-			sprintf(buff,"Welcome %s, your unique identification key is %s\nDo you wish to see this information again?again/quit",temp->name,temp->reg_no);
+			sprintf(buff,"Welcome %s, your unique identification key is %s\nDo you wish to see this information again?\nagain\nquit",temp->name,temp->reg_no);
 			if (send(connfd, buff, strlen(buff), 0) < 0){
         			printf("Can't send\n");
         			return -1;
